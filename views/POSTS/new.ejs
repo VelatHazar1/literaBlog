@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Post</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <h1>Publish A New Post</h1>
+    <form action="/posts" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" placeholder="title" />
+      <label for="text">Text:</label>
+      <textarea name="text" id="text" cols="30" rows="10"></textarea>
+      <label for="author">Author:</label>
+      <input type="text" name="author" id="author" placeholder="author" />
+      <label for="image">image:</label>
+      <input type="file" name="image" accept="image/*" />
+      <button>Publish</button>
+    </form>
+    <a href="/posts">Cancel</a>
+  </body>
+</html>
