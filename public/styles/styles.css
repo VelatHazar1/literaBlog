@@ -1,3 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-  background-color: #f2ecd6;
+  background-color: #e2d4cb;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.header-container .new-post-btn {
+  width: 20rem;
+  height: 3.2rem;
+  font-size: 1rem;
+  margin: 1rem;
+  background-color: #443730;
+  border-radius: 1rem;
+}
+.header-container .new-post-btn a {
+  text-decoration: none;
+  color: #f2ecd6;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container-title h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.main-container-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.main-container-posts .post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  width: 30rem;
+  height: 40rem;
+  background-color: #faeeee;
+}
+.main-container-posts .post .index-img {
+  width: 18rem;
+  height: 20rem;
+  border-radius: 1rem;
+}
+.main-container-posts .post .post-title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.main-container-posts .post .post-author {
+  font-size: 1rem;
+  font-weight: 200;
+}
+.main-container-posts .post .read {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: #443730;
+  color: #fff;
+  text-decoration: none;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 1180px) {
+  .header-container {
+    justify-content: center;
+  }
+  .header-container .new-post-btn {
+    width: 20rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+  }
+  .main-container-title h1 {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  .main-container-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .main-container-posts .post {
+    width: 20rem;
+    height: 30rem;
+    background-color: #faeeee;
+  }
+  .main-container-posts .post .index-img {
+    width: 15rem;
+    height: 17rem;
+  }
+  .main-container-posts .post .post-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .main-container-posts .post .post-author {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .main-container-posts .post .read {
+    font-size: 0.8rem;
+    width: 5rem;
+    height: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .header-container {
+    justify-content: center;
+  }
+  .header-container .new-post-btn {
+    width: 20rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+  }
+  .main-container-title h1 {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  .main-container-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .main-container-posts .post {
+    width: 20rem;
+    height: 30rem;
+    background-color: #faeeee;
+  }
+  .main-container-posts .post .index-img {
+    width: 15rem;
+    height: 17rem;
+  }
+  .main-container-posts .post .post-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .main-container-posts .post .post-author {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .main-container-posts .post .read {
+    font-size: 0.8rem;
+    width: 5rem;
+    height: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .header-container {
+    justify-content: center;
+  }
+  .header-container .new-post-btn {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header-container .new-post-btn a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .main-container-title h1 {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  .main-container-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .main-container-posts .post {
+    width: 20rem;
+    height: 30rem;
+    background-color: #faeeee;
+  }
+  .main-container-posts .post .index-img {
+    width: 15rem;
+    height: 17rem;
+  }
+  .main-container-posts .post .post-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .main-container-posts .post .post-author {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .main-container-posts .post .read {
+    font-size: 0.8rem;
+    width: 5rem;
+    height: 2rem;
+  }
 }

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #e2d4cb;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-top: 10rem;
+
+  .post-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    .title {
+      background-color: #faeeee;
+      border: none;
+      border-radius: 0.5rem;
+
+      width: 40rem;
+      height: 5rem;
+      padding: 1.5rem;
+
+      font-size: 1.2rem;
+    }
+    .text {
+      background-color: #faeeee;
+      border: none;
+      border-radius: 0.5rem;
+
+      width: 40rem;
+      height: 15rem;
+      padding: 1.5rem;
+
+      font-size: 1.2rem;
+    }
+    .author {
+      background-color: #faeeee;
+      border: none;
+      border-radius: 0.5rem;
+
+      width: 40rem;
+      height: 5rem;
+      padding: 1.5rem;
+
+      font-size: 1.2rem;
+    }
+
+    .publish-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #b8b3af;
+      color: #000;
+
+      cursor: pointer;
+
+      padding: 0.5rem;
+      border-radius: 1rem;
+      border: none;
+
+      font-size: 1.2rem;
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    width: 40rem;
+    padding-top: 2rem;
+    .cancel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+
+      background-color: #443730;
+      color: #fff;
+
+      text-decoration: none;
+
+      width: 8rem;
+      height: 3rem;
+      border-radius: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .flex-container {
+    height: 100vh;
+    padding-top: 2rem;
+
+    .post-form {
+      .title {
+        width: 18rem;
+        height: 3rem;
+        font-size: 1rem;
+      }
+      .text {
+        width: 18rem;
+        font-size: 1rem;
+      }
+      .author {
+        width: 18rem;
+        height: 3rem;
+        font-size: 1rem;
+      }
+
+      .publish-btn {
+        font-size: 1rem;
+      }
+    }
+    &-bottom {
+      width: 100%;
+      justify-content: end;
+      padding-right: 3.5rem;
+    }
+  }
+}

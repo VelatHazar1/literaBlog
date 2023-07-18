@@ -4,21 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Post</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/new.css" />
   </head>
   <body>
-    <h1>Publish A New Post</h1>
-    <form action="/posts" method="POST">
-      <label for="title">Title:</label>
-      <input type="text" name="title" id="title" placeholder="title" />
-      <label for="text">Text:</label>
-      <textarea name="text" id="text" cols="30" rows="10"></textarea>
-      <label for="author">Author:</label>
-      <input type="text" name="author" id="author" placeholder="author" />
-      <label for="image">image:</label>
-      <input type="file" name="image" accept="image/*" />
-      <button>Publish</button>
-    </form>
-    <a href="/posts">Cancel</a>
+    <div class="flex-container">
+      <div class="flex-container-top">
+        <form
+          action="/posts"
+          method="POST"
+          enctype="multipart/form-data"
+          class="post-form"
+        >
+          <input
+            type="text"
+            name="title"
+            placeholder="   Title..."
+            class="title"
+          />
+          <textarea
+            class="text"
+            name="text"
+            cols="30"
+            rows="10"
+            maxlength="450"
+            placeholder="   Maximum 450 characters..."
+          ></textarea>
+          <input
+            type="text"
+            name="author"
+            placeholder="   Author..."
+            class="author"
+          />
+          <label class="image-btn" for="image"
+            >Choose a File
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="upload-icon"
+            >
+              <path
+                fill="currentColor"
+                d="M11 16V7.85l-2.6 2.6L7 9l5-5l5 5l-1.4 1.45l-2.6-2.6V16h-2Zm-5 4q-.825 0-1.413-.588T4 18v-3h2v3h12v-3h2v3q0 .825-.588 1.413T18 20H6Z"
+              /></svg
+          ></label>
+          <input type="file" name="image" accept="image/*" id="image" hidden />
+          <button class="publish-btn">Publish</button>
+        </form>
+      </div>
+      <div class="flex-container-bottom">
+        <a class="cancel" href="/posts">Cancel</a>
+      </div>
+    </div>
   </body>
 </html>
